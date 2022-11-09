@@ -26,7 +26,7 @@ The chat is exported as a text file. This was my first time analyzing a text fil
 The exported chat was imported into Jupyter Notebook using pandas. There were various transformation methods I tried and I eventually stumbled on one by [rajkrishna92](https://github.com/rajkrishna92) that did exactly what I wanted so I took the parts of the code I needed and replicated for my own use. 
 After obtaining clean data, I saved it as a csv file. Since I wanted to show how many admins were in the group chat, I had to create another table from the original and clean to meet the conditions necessary to become an admin. An admin had the power to add, remove or make someone else admin. So, I selected messages where those conditions were met to obtain an admin table.
 Also, there were instances of "Media Omitted" in the message column which shows that a media was supposed to be there. SO, I counted those instances to know how many media files existed in the chat.
-I cannot share the complete data cleaning file due to privacy reasons but these steps below would help you to atleast have a clean data in the dataframe format:
+I cannot share the complete data cleaning file due to privacy reasons but these steps below would help you to atleast have a clean data in the dataframe format by following the stpes taken in the 'clean data' file.
 
 
 
@@ -59,8 +59,11 @@ And here is what the final combined report design looks like:
 
 
 # Findings
-
-
+* There were a totl of 26 members and just one admin in the group chat within the 3 months analysis. 
+* There were a total of 8,645 messages and 1,110 media files sent on the group chat.
+* Conversations were at a peak around 9pm and according to finding, this is the time for meetings whihc take place on Fridays and Sundays.
+* There was a larer percentage of conversations recorded in August compared to Septmenber and October. 
+* The most active participants are: Oluwatoni, Imisioluwa, Oyin, Daniella and Fisayo.
 
 # Conclusion
 It was enjoyable to work on this project. The Python script and documentation should make it easier for you to replicate using your own data. The process of data cleaning and data visualization as a whole may be improved in the future.
