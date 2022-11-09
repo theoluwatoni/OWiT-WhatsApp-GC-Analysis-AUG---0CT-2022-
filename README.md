@@ -17,7 +17,7 @@ This project was one that resulted from boredom caused by sickness that would in
 
 # Data Gathering
 To obtain this data, I had to export the chat and to do this, I went to group chat, clicked on the More option(…) at the header, and clicked on ‘More’ then ‘Export Chat’. You can decide to export with or without media. In my case, I exported without media.
-Here’s a link to guide you in exporting WhatsApp chats.
+Here’s a link to guide you in [exporting WhatsApp chats](https://www.indiatoday.in/information/story/how-to-export-whatsapp-chats-1723409-2020-09-19).
 The chat is exported as a text file. This was my first time analyzing a text file and I encountered some great surprises.
 
 
@@ -105,6 +105,8 @@ Here is what the initial background for the dashboard looks like:
 
 
 And here is what the final combined report design looks like:
+![Screenshot_20221109-154837_Chrome](https://user-images.githubusercontent.com/112688755/200862014-5a056675-0587-4cc6-b99d-58d51e9b7ab1.jpg)
+
 
 
 
