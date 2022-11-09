@@ -27,63 +27,6 @@ The exported chat was imported into Jupyter Notebook using pandas. There were va
 After obtaining clean data, I saved it as a csv file. Since I wanted to show how many admins were in the group chat, I had to create another table from the original and clean to meet the conditions necessary to become an admin. An admin had the power to add, remove or make someone else admin. So, I selected messages where those conditions were met to obtain an admin table.
 Also, there were instances of "Media Omitted" in the message column which shows that a media was supposed to be there. SO, I counted those instances to know how many media files existed in the chat.
 I cannot share the complete data cleaning file due to privacy reasons but these steps below would help you to atleast have a clean data in the dataframe format:
-"""
-### Extract the Date time
-def date_time(s):
-    pattern='^([0-9]+)(\/)([0-9]+)(\/)([0-9]+), ([0-9]+):([0-9]+)[ ]?(AM|PM|am|pm)? -'
-    result=re.match(pattern, s)
-    if result:
-        return True
-    return False 
-
-### Extract contacts
-def find_contact(s):
-    s=s.split(":")
-    if len(s)==2:
-        return True
-    else:
-        return False
-    
-### Extract Message
-def getMassage(line):
-    splitline=line.split(' - ')
-    datetime= splitline[0];
-    date, time= datetime.split(', ')
-    message=" ".join(splitline[1:])
-    
-    if find_contact(message):
-        splitmessage=message.split(": ")
-        author=splitmessage[0]
-        message=splitmessage[1]
-    else:
-        author=None
-    return date, time, author, message
-
-
-data=[]
-conversation="WhatsApp Chat with Oluwatoni's Women in Tech (1).txt"
-with open(conversation, encoding="utf-8") as fp:
-    fp.readline()
-    messageBuffer=[]
-    date, time, author= None, None, None
-    while True:
-        line=fp.readline()
-        if not line:
-            break
-        line=line.strip()
-        if date_time(line):
-            if len(messageBuffer) >0:
-                data.append([date, time, author, ''.join(messageBuffer)])
-            messageBuffer.clear()
-            date, time, author, message=getMassage(line)
-            messageBuffer.append(message)
-        else:
-            messageBuffer.append(line)
-
-
-df=pd.DataFrame(data, columns=["Date", "Time", "contact", "Message"])
-df.head()
-"""
 
 
 
